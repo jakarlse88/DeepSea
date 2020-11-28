@@ -7,14 +7,23 @@
       <div class="row">
         <div class="col">
           <p><strong>Are you you?</strong></p>
-          <mat-radio-group formControlName="identity">
+          <mat-radio-group formControlName="identity" required>
             <mat-radio-button value="true">Yes</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p><strong>Did someone—let's not name names—mistake the 'h' in your Morse code for 'ttt' and spend hours trying to work out what 'echtttes'<sup>*</sup> means?</strong></p>
+          <mat-radio-group formControlName="echoes" required>
+            <mat-radio-button value="true">omg</mat-radio-button>
           </mat-radio-group>
         </div>
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="addressForm.invalid">Beep Boop</button>
     </mat-card-actions>
+    <small><sup>*</sup> I mean, wtf is 'echt ttes'? Not 'real transthoracic echocardiogram', it turns out.</small>
   </mat-card>
 </form>

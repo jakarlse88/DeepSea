@@ -9,14 +9,25 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   addressForm = this.fb.group({
-    identity: [null, null]
+    identity: [null, null],
+    echoes: [null, null]
   });
 
   constructor(
     private fb: FormBuilder,
-    private router: Router) { }
+    private router: Router) {
+  }
 
-  onSubmit() {
+  formIsValid(): boolean {
+    if (this.addressForm.get('identity').value === true
+      && this.addressForm.get('echoes').value === true) {
+      return true;
+    }
+
+    return false;
+  }
+
+  onSubmit(): void {
     this.router.navigate(['success']);
   }
 }
