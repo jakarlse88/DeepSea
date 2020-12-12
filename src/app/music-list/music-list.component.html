@@ -1,0 +1,21 @@
+<h2>Music</h2>
+
+<mat-grid-list cols="2" rowHeight="2:1" style="width: 66vw" gutter="50px">
+  <mat-grid-tile *ngFor="let genre of genreArray">
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ genre.name }}</mat-card-title>
+        <mat-card-subtitle>{{ genre.caption }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <ul>
+          <li *ngFor="let song of genre.songArray"><a href="{{ song.uri }}" target="_noopen">{{ song.artist }} -
+              {{ song.songTitle }}</a>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+
+  </mat-grid-tile>
+</mat-grid-list>

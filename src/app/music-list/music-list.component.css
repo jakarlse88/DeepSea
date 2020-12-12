@@ -1,0 +1,15 @@
+h2 { 
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline;
+}

@@ -1,6 +1,16 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <span>DeepSea v2.0</span>
+  <span>DeepSea v3.0</span>
+
+  <a mat-button color="primary" [routerLink]="['/']" class="nav-button" style="color: white; margin-left: 1em;">
+    <mat-icon>house</mat-icon>
+    Home
+  </a>
+
+  <a mat-button color="primary" [routerLink]="['/music']" class="nav-button" style="color: white;">
+    <mat-icon>audiotrack</mat-icon>
+    Music
+  </a>
 </div>
 
 <div class="content" role="main">
